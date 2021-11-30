@@ -17,7 +17,10 @@ function clickHandler(){
 
 function calculateProfitLoss(initial,quantity,current){
     if(initial === 0 || quantity === 0 || current === 0){
-        message.innerText = "Please fill the fields correctly."
+        message.innerText = "Please fill the fields correctly.";
+    }
+    else if(initial < 0 || quantity < 0 || current < 0){
+        message.innerText = "Please enter valid amounts";
     }
     else{
         if(initial > current){
